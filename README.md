@@ -1,4 +1,3 @@
-```markdown
 # NTA Fiscal Panel — Dataset README
 
 **Project:** Predicting Fiscal Underutilization in Philippine Local Governments  
@@ -668,4 +667,3 @@ python -u src\shap_report.py
 ---
 
 *Generated: 2026-09-24. Pipeline version: NTA-Fiscal v0.1.*
-```
