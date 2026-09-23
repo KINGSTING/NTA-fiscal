@@ -1,0 +1,30 @@
+==============================================================================
+POPULATION FETCH QA
+==============================================================================
+CSVs scanned:                    2
+  LGU-level tables identified:   1
+LGUs matched to master:          1724 / 1724
+
+Rows produced:                   56,636
+Distinct psgc10:                 1724
+Years covered:                   1992 – 2024
+
+-- pop_source distribution --
+  city_direct                149 LGUs
+  lgu_direct                 1 LGUs
+  master_2024_only           8 LGUs
+  province_allocated         1484 LGUs
+  province_direct            82 LGUs
+
+-- Sample (2024) --
+    psgc10  fiscal_year    population  land_area_sqkm         pop_source
+0102800000         2024 618850.000000         3418.75    province_direct
+0102801000         2024   3134.465787         3418.75 province_allocated
+0102802000         2024  45021.326497         3418.75 province_allocated
+0102803000         2024  45156.112652         3418.75 province_allocated
+0102804000         2024  20942.742670         3418.75 province_allocated
+0102805000         2024  56781.000000         3418.75        city_direct
+0102806000         2024  15076.794191         3418.75 province_allocated
+0102807000         2024   2441.279848         3418.75 province_allocated
+0102808000         2024  16856.521585         3418.75 province_allocated
+0102809000         2024  55256.822061         3418.75 province_allocated

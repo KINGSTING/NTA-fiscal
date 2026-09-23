@@ -1,0 +1,207 @@
+# =============================================================
+# Philippine LGU Fiscal Effectiveness Research
+# Predicting LGU Effectiveness in Converting NTA into Outcomes
+# Python 3.10+ required
+# =============================================================
+
+# -------------------------------------------------------------
+# CORE DATA MANIPULATION
+# -------------------------------------------------------------
+pandas>=2.2.0
+numpy>=1.26.0
+polars>=0.20.0              # Optional: faster alternative for large panels
+pyarrow>=15.0.0             # Parquet I/O for the harmonized panel
+openpyxl>=3.1.2             # Excel .xlsx reading/writing
+xlrd>=2.0.1                 # Excel .xls reading (legacy BOS/SIE files)
+XlsxWriter>=3.1.9           # Excel writing with formatting
+odfpy>=1.4.1                # LibreOffice .ods support (if needed)
+
+# -------------------------------------------------------------
+# PDF EXTRACTION (SGLG, GFH, COA Audit Reports)
+# -------------------------------------------------------------
+pdfplumber>=0.11.0          # Primary PDF text + table extraction
+tabula-py>=2.9.0            # Table extraction from tabular PDFs
+camelot-py>=0.11.0          # Alternative table extractor (requires ghostscript)
+PyPDF2>=3.0.1               # Fallback PDF reader
+pypdf>=4.2.0                # Modern replacement for PyPDF2
+pdf2image>=1.17.0           # Convert PDF pages to images (for OCR fallback)
+pytesseract>=0.3.10         # OCR engine wrapper
+Pillow>=10.3.0              # Image processing for OCR
+
+# -------------------------------------------------------------
+# WEB SCRAPING / DATA ACQUISITION
+# -------------------------------------------------------------
+requests>=2.32.0
+beautifulsoup4>=4.12.3
+lxml>=5.2.0                 # Fast HTML/XML parser
+cloudscraper>=1.2.71        # Bypass Cloudflare (COA website workaround)
+selenium>=4.21.0            # For JS-heavy sites (last resort)
+playwright>=1.44.0          # Modern alternative to Selenium
+
+# -------------------------------------------------------------
+# MACHINE LEARNING
+# -------------------------------------------------------------
+scikit-learn>=1.5.0         # Preprocessing, model selection, metrics
+xgboost>=2.0.3              # Primary gradient boosting model
+lightgbm>=4.3.0             # Comparison model
+catboost>=1.2.5             # Comparison model (handles categoricals natively)
+imbalanced-learn>=0.12.3    # If LES is binned into classes
+
+# -------------------------------------------------------------
+# MODEL INTERPRETABILITY
+# -------------------------------------------------------------
+shap>=0.45.0                # SHAP values for feature attribution
+lime>=0.2.0.1               # Optional: LIME for local explanations
+interpret>=0.6.0            # Optional: EBM and other interpretable models
+
+# -------------------------------------------------------------
+# STATISTICS AND ECONOMETRICS
+# -------------------------------------------------------------
+statsmodels>=0.14.2         # Panel regression, DiD, IV
+linearmodels>=6.0           # Panel FE/RE, GMM, IV panel estimators
+scipy>=1.13.0               # Statistical tests
+
+# -------------------------------------------------------------
+# CLUSTERING / UNSUPERVISED (for fiscal archetypes)
+# -------------------------------------------------------------
+scikit-learn>=1.5.0         # K-Means, DBSCAN (already listed above)
+hdbscan>=0.8.40             # Density-based clustering variant
+yellowbrick>=1.5            # Cluster visualization and diagnostics
+
+# -------------------------------------------------------------
+# TIME SERIES FORECASTING
+# -------------------------------------------------------------
+statsmodels>=0.14.2         # ARIMA, SARIMA (already listed above)
+prophet>=1.1.5              # Facebook Prophet for trend/seasonality
+sktime>=0.29.0              # Unified time-series ML framework
+pmdarima>=2.0.4             # Auto-ARIMA
+
+# -------------------------------------------------------------
+# VISUALIZATION
+# -------------------------------------------------------------
+matplotlib>=3.9.0
+seaborn>=0.13.2
+plotly>=5.22.0              # Interactive charts for the dashboard
+altair>=5.3.0               # Declarative visualization
+folium>=0.16.0              # Interactive maps (geographic disparity analysis)
+geopandas>=0.14.4           # Spatial data manipulation
+contextily>=1.6.0           # Basemap tiles for folium/geopandas
+kaleido>=0.2.1              # Static image export for Plotly
+
+# -------------------------------------------------------------
+# SPATIAL ANALYSIS (Moran's I, LISA clusters)
+# -------------------------------------------------------------
+libpysal>=4.11.0            # Spatial weights
+esda>=2.6.0                 # Exploratory spatial data analysis
+spreg>=1.6.0                # Spatial regression
+mgwr>=2.2.1                 # Geographically weighted regression
+splot>=1.1.5                # Spatial visualization
+
+# -------------------------------------------------------------
+# REPORTING AND DOCUMENT GENERATION
+# -------------------------------------------------------------
+jupyterlab>=4.2.0           # Interactive development
+notebook>=7.2.0
+nbconvert>=7.16.0           # Export notebooks to PDF/HTML
+nbformat>=5.10.0
+papermill>=2.6.0            # Parameterized notebook execution
+jinja2>=3.1.4               # Templating for reports
+markdown>=3.6               # Markdown conversion
+weasyprint>=62.0            # HTML → PDF for policy briefs
+python-docx>=1.1.0          # Word document generation (for DBM submissions)
+reportlab>=4.2.0            # PDF generation (alternative)
+great-tables>=0.10.0        # Publication-quality tables from DataFrames
+
+# -------------------------------------------------------------
+# DASHBOARD (for DBM Fiscal Conference presentation)
+# -------------------------------------------------------------
+dash>=2.17.0                # Interactive web dashboard
+dash-bootstrap-components>=1.6.0
+streamlit>=1.35.0           # Alternative lightweight dashboard
+panel>=1.4.0                # Alternative (HoloViz ecosystem)
+
+# -------------------------------------------------------------
+# DATABASE / STORAGE (if panel grows large)
+# -------------------------------------------------------------
+sqlalchemy>=2.0.30
+duckdb>=1.0.0               # Fast in-process OLAP for panel queries
+sqlite-utils>=3.36          # Convenience wrapper for SQLite
+
+# -------------------------------------------------------------
+# UTILITIES
+# -------------------------------------------------------------
+python-dateutil>=2.9.0
+pytz>=2024.1
+tqdm>=4.66.4                # Progress bars for batch processing
+joblib>=1.4.2               # Parallel processing / caching
+pyyaml>=6.0.1               # Config files
+python-dotenv>=1.0.1        # Environment variable management
+loguru>=0.7.2               # Enhanced logging
+tenacity>=8.3.0             # Retry logic for scraping
+unidecode>=1.3.8            # Normalize LGU names (accents, ñ, etc.)
+
+# -------------------------------------------------------------
+# TESTING AND QUALITY ASSURANCE
+# -------------------------------------------------------------
+pytest>=8.2.0
+pytest-cov>=5.0.0
+hypothesis>=6.100.0         # Property-based testing for the harmonizer
+ruff>=0.4.8                 # Fast linter
+black>=24.4.2               # Code formatter
+mypy>=1.10.0                # Static type checking
+pre-commit>=3.7.1           # Git hooks for code quality
+
+# -------------------------------------------------------------
+# VERSION CONTROL / REPRODUCIBILITY
+# -------------------------------------------------------------
+dvc>=3.51.0                 # Data version control (large files)
+gitpython>=3.1.43
+
+# =============================================================
+# GPU ACCELERATION ADD-ONS — WINDOWS COMPATIBLE
+# Install AFTER requirements.txt
+# Requires: NVIDIA driver (recent), Windows 10/11, Python 3.10+
+# =============================================================
+
+# -------------------------------------------------------------
+# DEEP LEARNING (PyTorch bundles its own CUDA runtime)
+# -------------------------------------------------------------
+# NOTE: Do NOT install nvidia-*-cu12 packages on Windows.
+# Install PyTorch with CUDA support separately (see commands below).
+torch>=2.4.0
+torchvision>=0.19.0
+torchaudio>=2.4.0
+
+# PyTorch Lightning — cleaner training loops for LSTM/Transformer
+lightning>=2.4.0
+torchmetrics>=1.4.0
+
+# Tabular deep learning
+pytorch-tabnet>=4.1.0
+
+# -------------------------------------------------------------
+# GPU-ACCELERATED BOOSTING LIBRARIES
+# -------------------------------------------------------------
+# XGBoost: The standard pip wheel on Windows INCLUDES GPU support.
+# No separate GPU package needed. Just use device="cuda" in the API.
+xgboost>=2.0.3
+
+# CatBoost: GPU support is built into the standard wheel on Windows.
+catboost>=1.2.5
+
+# LightGBM: GPU on Windows requires manual compilation with OpenCL.
+# The pip wheel is CPU-only. Leave this as CPU for now.
+lightgbm>=4.3.0
+
+# -------------------------------------------------------------
+# HYPERPARAMETER TUNING WITH GPU PARALLELISM
+# -------------------------------------------------------------
+optuna>=3.6.1
+optuna-integration[lightgbm,xgboost]>=3.6.0
+ray[tune]>=2.23.0
+
+# -------------------------------------------------------------
+# GPU MONITORING / UTILITIES
+# -------------------------------------------------------------
+gpustat>=1.1.1
+py-cpuinfo>=9.0.0

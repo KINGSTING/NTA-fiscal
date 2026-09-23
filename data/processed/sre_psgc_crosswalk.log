@@ -1,0 +1,33 @@
+2026-09-23 16:53:50,649 | INFO    | Loading SRE panel: data\processed\sre_panel.parquet
+2026-09-23 16:53:50,692 | INFO    |   56107 rows
+2026-09-23 16:53:50,692 | INFO    | Loading PSGC master: data\processed\psgc_lgu_master.parquet
+2026-09-23 16:53:50,696 | INFO    |   1724 LGU rows
+2026-09-23 16:53:50,803 | INFO    | Distinct LGU tuples to match: 5704
+2026-09-23 16:53:50,859 | INFO    |   matched 500 / 5704
+2026-09-23 16:53:50,910 | INFO    |   matched 1000 / 5704
+2026-09-23 16:53:50,955 | INFO    |   matched 1500 / 5704
+2026-09-23 16:53:51,015 | INFO    |   matched 2000 / 5704
+2026-09-23 16:53:51,053 | INFO    |   matched 2500 / 5704
+2026-09-23 16:53:51,099 | INFO    |   matched 3000 / 5704
+2026-09-23 16:53:51,140 | INFO    |   matched 3500 / 5704
+2026-09-23 16:53:51,187 | INFO    |   matched 4000 / 5704
+2026-09-23 16:53:51,230 | INFO    |   matched 4500 / 5704
+2026-09-23 16:53:51,273 | INFO    |   matched 5000 / 5704
+2026-09-23 16:53:51,364 | INFO    |   matched 5500 / 5704
+2026-09-23 16:53:51,388 | INFO    | Distinct tuple match rate: 99.96%
+2026-09-23 16:53:51,390 | INFO    | Tier distribution:
+tier
+0       2
+1    5495
+2      66
+3     140
+4       1
+2026-09-23 16:53:51,410 | INFO    | Unmatched tuples: 2
+2026-09-23 16:53:51,424 | INFO    | Top 30 unmatched:
+        lgu_name       province     lgu_type  n_rows
+PROVINCIAL TOTAL Sultan Kudarat Municipality       1
+               `   Ilocos Norte Municipality       1
+2026-09-23 16:53:51,424 | INFO    | Merging back to panel...
+2026-09-23 16:53:51,436 | INFO    | Panel row match rate: 100.00%
+2026-09-23 16:53:52,830 | INFO    | Wrote sre_panel_with_psgc.parquet / .csv (56107 rows)
+2026-09-23 16:53:52,830 | INFO    | Done.

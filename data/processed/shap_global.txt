@@ -1,0 +1,26 @@
+==============================================================================
+GLOBAL SHAP IMPORTANCE
+==============================================================================
+Mean |SHAP| across all rows (higher = more important).
+
+rank feature                         mean|SHAP|   share  description
+------------------------------------------------------------------------------
+   1 ur_b_current                       0.03583 40.83%  Underutilization ratio, current year (t)
+   2 fiscal_year                        0.01919 21.87%  Fiscal year
+   3 ur_b_lag1                          0.01036 11.81%  Underutilization ratio, lag 1 (t-1)
+   4 ur_b_lag2                          0.00924 10.52%  Underutilization ratio, lag 2 (t-2)
+   5 election_year                      0.00313  3.57%  Election-year indicator
+   6 log_nta_ira                        0.00255  2.90%  log(1 + NTA / IRA received)
+   7 pi_2018                            0.00189  2.15%  Poverty incidence (2018 SAE)
+   8 log_total_local_sources            0.00169  1.93%  log(1 + total own-source revenue)
+   9 region                             0.00145  1.65%  Region (categorical)
+  10 lgu_type                           0.00082  0.94%  LGU type (city / mun / prov)
+  11 log_population                     0.00063  0.72%  log(1 + population)
+  12 nta_dependency                     0.00057  0.65%  NTA as share of total income
+  13 revenue_hhi                        0.00018  0.20%  Revenue concentration (HHI)
+  14 log_land_area_sqkm                 0.00015  0.17%  log(1 + land area)
+  15 pop_density                        0.00008  0.09%  Population density
+  16 income_class_num                   0.00000  0.00%  Income class (1=highest, 6=lowest)
+  17 urban_rural                        0.00000  0.00%  Urban / rural
+
+Total mean |SHAP| (all features): 0.08775

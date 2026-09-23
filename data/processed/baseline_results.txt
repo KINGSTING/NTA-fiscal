@@ -1,0 +1,70 @@
+==========================================================================================
+BASELINE MODEL RESULTS
+==========================================================================================
+Target: target_ur_b
+
+RMSE ratio < 1.0 means the model beats naive persistence;
+ratio >= 1.0 means naive persistence is at least as good.
+
+-- Per-fold metrics --
+fold  model                 n_train  n_test     RMSE      MAE       R2  RMSE_ratio
+------------------------------------------------------------------------------------------
+F1    fold_mean              23,113   5,049   0.1134   0.0848  -0.0097       0.968
+F1    lightgbm               23,113   5,049   0.1011   0.0735   0.1972       0.863
+F1    naive_persistence      23,113   5,049   0.1171   0.0793  -0.0780       1.000
+F1    random_forest          23,113   5,049   0.0996   0.0726   0.2211       0.850
+F1    ridge                  23,113   5,049   0.0995   0.0728   0.2224       0.849
+F1    zero                   23,113   5,049   0.1586   0.1115  -0.9769       1.354
+F2    fold_mean              28,162   5,049   0.1189   0.0864  -0.0165       0.974
+F2    lightgbm               28,162   5,049   0.1078   0.0791   0.1634       0.883
+F2    naive_persistence      28,162   5,049   0.1221   0.0856  -0.0723       1.000
+F2    random_forest          28,162   5,049   0.1051   0.0770   0.2051       0.861
+F2    ridge                  28,162   5,049   0.1025   0.0749   0.2445       0.839
+F2    zero                   28,162   5,049   0.1665   0.1175  -0.9944       1.364
+F3    fold_mean              33,211   5,086   0.1318   0.0979  -0.1545       1.094
+F3    lightgbm               33,211   5,086   0.1195   0.0857   0.0514       0.992
+F3    naive_persistence      33,211   5,086   0.1204   0.0842   0.0362       1.000
+F3    random_forest          33,211   5,086   0.1117   0.0811   0.1706       0.928
+F3    ridge                  33,211   5,086   0.1100   0.0804   0.1963       0.913
+F3    zero                   33,211   5,086   0.1960   0.1529  -1.5539       1.628
+F4    fold_mean              38,297   5,110   0.1999   0.1413  -0.3558       1.212
+F4    lightgbm               38,297   5,110   0.1485   0.0964   0.2515       0.900
+F4    naive_persistence      38,297   5,110   0.1650   0.1033   0.0765       1.000
+F4    random_forest          38,297   5,110   0.1486   0.0968   0.2508       0.901
+F4    ridge                  38,297   5,110   0.1520   0.0983   0.2163       0.921
+F4    zero                   38,297   5,110   0.2740   0.2135  -1.5465       1.661
+F5    fold_mean              43,407   3,409   0.1988   0.1305  -0.1684       0.866
+F5    lightgbm               43,407   3,409   0.1753   0.1124   0.0916       0.764
+F5    naive_persistence      43,407   3,409   0.2295   0.1293  -0.5575       1.000
+F5    random_forest          43,407   3,409   0.1753   0.1117   0.0912       0.764
+F5    ridge                  43,407   3,409   0.1746   0.1101   0.0991       0.761
+F5    zero                   43,407   3,409   0.2707   0.1986  -1.1664       1.179
+H     fold_mean              46,816   6,834   0.1584   0.1156  -0.0866       0.997
+H     lightgbm               46,816   6,834   0.1321   0.0981   0.2444       0.831
+H     naive_persistence      46,816   6,834   0.1589   0.1030  -0.0931       1.000
+H     random_forest          46,816   6,834   0.1279   0.0954   0.2919       0.805
+H     ridge                  46,816   6,834   0.1316   0.0992   0.2503       0.828
+H     zero                   46,816   6,834   0.2305   0.1734  -1.3019       1.451
+
+-- Cross-fold mean (averaging across the 5 CV folds only, excluding H) --
+  fold_mean            RMSE=0.1525  MAE=0.1082  R2=-0.1410  RMSE_ratio=1.023
+  lightgbm             RMSE=0.1304  MAE=0.0894  R2=0.1510  RMSE_ratio=0.880
+  naive_persistence    RMSE=0.1508  MAE=0.0963  R2=-0.1190  RMSE_ratio=1.000
+  random_forest        RMSE=0.1281  MAE=0.0878  R2=0.1878  RMSE_ratio=0.861
+  ridge                RMSE=0.1277  MAE=0.0873  R2=0.1957  RMSE_ratio=0.857
+  zero                 RMSE=0.2132  MAE=0.1588  R2=-1.2476  RMSE_ratio=1.437
+
+-- Final holdout (H: 2020-2024) --
+  naive_persistence    RMSE=0.1589  MAE=0.1030  R2=-0.0931  RMSE_ratio=1.000
+  fold_mean            RMSE=0.1584  MAE=0.1156  R2=-0.0866  RMSE_ratio=0.997
+  zero                 RMSE=0.2305  MAE=0.1734  R2=-1.3019  RMSE_ratio=1.451
+  ridge                RMSE=0.1316  MAE=0.0992  R2=0.2503  RMSE_ratio=0.828
+  random_forest        RMSE=0.1279  MAE=0.0954  R2=0.2919  RMSE_ratio=0.805
+  lightgbm             RMSE=0.1321  MAE=0.0981  R2=0.2444  RMSE_ratio=0.831
+
+-- Verdict --
+  Best non-trivial baseline:  ridge
+  Its CV mean RMSE:           0.1277
+  Naive persistence RMSE:     0.1508
+  Ratio:                      0.847
+  => Baseline beats naive by >5%. XGBoost has a target.

@@ -1,0 +1,112 @@
+==============================================================================
+SHAP IMPORTANCE BY SUBGROUP
+==============================================================================
+Top 10 features per group by mean |SHAP|.
+
+-- LGU type = province  (n=2,535) --
+  ur_b_current                       0.04615  Underutilization ratio, current year (t)
+  fiscal_year                        0.02040  Fiscal year
+  ur_b_lag1                          0.01365  Underutilization ratio, lag 1 (t-1)
+  ur_b_lag2                          0.01116  Underutilization ratio, lag 2 (t-2)
+  log_nta_ira                        0.00484  log(1 + NTA / IRA received)
+  election_year                      0.00320  Election-year indicator
+  log_population                     0.00188  log(1 + population)
+  log_total_local_sources            0.00162  log(1 + total own-source revenue)
+  region                             0.00148  Region (categorical)
+  pi_2018                            0.00143  Poverty incidence (2018 SAE)
+
+-- LGU type = city  (n=4,731) --
+  ur_b_current                       0.04542  Underutilization ratio, current year (t)
+  fiscal_year                        0.02031  Fiscal year
+  ur_b_lag1                          0.01322  Underutilization ratio, lag 1 (t-1)
+  ur_b_lag2                          0.01142  Underutilization ratio, lag 2 (t-2)
+  lgu_type                           0.00473  LGU type (city / mun / prov)
+  log_nta_ira                        0.00410  log(1 + NTA / IRA received)
+  election_year                      0.00323  Election-year indicator
+  log_total_local_sources            0.00166  log(1 + total own-source revenue)
+  region                             0.00153  Region (categorical)
+  nta_dependency                     0.00137  NTA as share of total income
+
+-- LGU type = municipality  (n=46,384) --
+  ur_b_current                       0.03429  Underutilization ratio, current year (t)
+  fiscal_year                        0.01901  Fiscal year
+  ur_b_lag1                          0.00989  Underutilization ratio, lag 1 (t-1)
+  ur_b_lag2                          0.00891  Underutilization ratio, lag 2 (t-2)
+  election_year                      0.00312  Election-year indicator
+  log_nta_ira                        0.00226  log(1 + NTA / IRA received)
+  pi_2018                            0.00197  Poverty incidence (2018 SAE)
+  log_total_local_sources            0.00170  log(1 + total own-source revenue)
+  region                             0.00144  Region (categorical)
+  nta_dependency                     0.00050  NTA as share of total income
+
+-- Outside NCR  (n=53,650) --
+  ur_b_current                       0.03583  Underutilization ratio, current year (t)
+  fiscal_year                        0.01919  Fiscal year
+  ur_b_lag1                          0.01036  Underutilization ratio, lag 1 (t-1)
+  ur_b_lag2                          0.00924  Underutilization ratio, lag 2 (t-2)
+  election_year                      0.00313  Election-year indicator
+  log_nta_ira                        0.00255  log(1 + NTA / IRA received)
+  pi_2018                            0.00189  Poverty incidence (2018 SAE)
+  log_total_local_sources            0.00169  log(1 + total own-source revenue)
+  region                             0.00145  Region (categorical)
+  lgu_type                           0.00082  LGU type (city / mun / prov)
+
+-- BOS era 1992-2000  (n=14,689) --
+  ur_b_current                       0.03003  Underutilization ratio, current year (t)
+  fiscal_year                        0.01830  Fiscal year
+  ur_b_lag2                          0.01010  Underutilization ratio, lag 2 (t-2)
+  ur_b_lag1                          0.00794  Underutilization ratio, lag 1 (t-1)
+  election_year                      0.00318  Election-year indicator
+  log_nta_ira                        0.00239  log(1 + NTA / IRA received)
+  log_total_local_sources            0.00203  log(1 + total own-source revenue)
+  pi_2018                            0.00141  Poverty incidence (2018 SAE)
+  region                             0.00121  Region (categorical)
+  lgu_type                           0.00109  LGU type (city / mun / prov)
+
+-- SIE era 2001-2008  (n=13,473) --
+  ur_b_current                       0.03135  Underutilization ratio, current year (t)
+  ur_b_lag1                          0.00883  Underutilization ratio, lag 1 (t-1)
+  ur_b_lag2                          0.00745  Underutilization ratio, lag 2 (t-2)
+  fiscal_year                        0.00711  Fiscal year
+  election_year                      0.00364  Election-year indicator
+  log_nta_ira                        0.00202  log(1 + NTA / IRA received)
+  pi_2018                            0.00169  Poverty incidence (2018 SAE)
+  log_total_local_sources            0.00168  log(1 + total own-source revenue)
+  region                             0.00131  Region (categorical)
+  lgu_type                           0.00076  LGU type (city / mun / prov)
+
+-- SRE early 2009-2013  (n=8,429) --
+  ur_b_current                       0.03219  Underutilization ratio, current year (t)
+  fiscal_year                        0.01242  Fiscal year
+  ur_b_lag1                          0.00953  Underutilization ratio, lag 1 (t-1)
+  ur_b_lag2                          0.00793  Underutilization ratio, lag 2 (t-2)
+  election_year                      0.00354  Election-year indicator
+  log_nta_ira                        0.00220  log(1 + NTA / IRA received)
+  pi_2018                            0.00185  Poverty incidence (2018 SAE)
+  log_total_local_sources            0.00157  log(1 + total own-source revenue)
+  region                             0.00140  Region (categorical)
+  lgu_type                           0.00075  LGU type (city / mun / prov)
+
+-- SRE pre-COVID 2014-2019  (n=10,225) --
+  ur_b_current                       0.04656  Underutilization ratio, current year (t)
+  fiscal_year                        0.03566  Fiscal year
+  ur_b_lag1                          0.01338  Underutilization ratio, lag 1 (t-1)
+  ur_b_lag2                          0.01001  Underutilization ratio, lag 2 (t-2)
+  log_nta_ira                        0.00298  log(1 + NTA / IRA received)
+  election_year                      0.00255  Election-year indicator
+  pi_2018                            0.00247  Poverty incidence (2018 SAE)
+  region                             0.00174  Region (categorical)
+  log_total_local_sources            0.00147  log(1 + total own-source revenue)
+  nta_dependency                     0.00096  NTA as share of total income
+
+-- SRE post-COVID 2020-2024  (n=6,834) --
+  ur_b_current                       0.04556  Underutilization ratio, current year (t)
+  fiscal_year                        0.02862  Fiscal year
+  ur_b_lag1                          0.01511  Underutilization ratio, lag 1 (t-1)
+  ur_b_lag2                          0.01135  Underutilization ratio, lag 2 (t-2)
+  log_nta_ira                        0.00368  log(1 + NTA / IRA received)
+  pi_2018                            0.00246  Poverty incidence (2018 SAE)
+  election_year                      0.00236  Election-year indicator
+  region                             0.00187  Region (categorical)
+  log_total_local_sources            0.00144  log(1 + total own-source revenue)
+  nta_dependency                     0.00085  NTA as share of total income

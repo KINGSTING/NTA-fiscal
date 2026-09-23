@@ -1,0 +1,39 @@
+2026-09-23 16:45:52,978 | INFO    | Loading PSA panel: data\processed\psa_panel.parquet
+2026-09-23 16:45:53,013 | INFO    |   1612 rows, 19 columns
+2026-09-23 16:45:53,014 | DEBUG   | PSA columns: ['lgu_name', 'province', 'region', 'lgu_type', 'pi_2018', 'pi_2021', 'pi_2023', 'cv_2018', 'cv_2021', 'cv_2023', 'se_2018', 'se_2021', 'se_2023', 'ci_lo_2018', 'ci_hi_2018', 'ci_lo_2021', 'ci_hi_2021', 'ci_lo_2023', 'ci_hi_2023']
+2026-09-23 16:45:53,014 | INFO    | Schema resolved: {'lgu_col': 'lgu_name', 'prov_col': 'province', 'region_col': 'region', 'type_col': 'lgu_type', 'psgc_col': None}
+2026-09-23 16:45:53,014 | INFO    | Loading PSGC master: data\processed\psgc_lgu_master.parquet
+2026-09-23 16:45:53,017 | INFO    |   1724 LGU rows
+2026-09-23 16:45:53,118 | INFO    | Distinct LGU tuples to match: 1612
+2026-09-23 16:45:53,163 | INFO    |   matched 500 / 1612
+2026-09-23 16:45:53,207 | INFO    |   matched 1000 / 1612
+2026-09-23 16:45:53,252 | INFO    |   matched 1500 / 1612
+2026-09-23 16:45:53,273 | INFO    | Distinct tuple match rate (all):      100.00%
+2026-09-23 16:45:53,273 | INFO    | Distinct tuple match rate (real LGU): 100.0000%  (1612 / 1612)
+2026-09-23 16:45:53,274 | INFO    | Tier distribution:
+tier
+1    1600
+2       6
+3       6
+2026-09-23 16:45:53,275 | INFO    | NCR tuples: 14  matched: 14  (100.00%)
+2026-09-23 16:45:53,278 | DEBUG   | NCR crosswalk:
+   lgu_name province     psgc10  tier                                     matched_name
+      Tondo          1380600000     1       City of Manila (via Manila district Tondo)
+    Binondo          1380600000     1     City of Manila (via Manila district Binondo)
+     Quiapo          1380600000     1      City of Manila (via Manila district Quiapo)
+San Nicolas          1380600000     1 City of Manila (via Manila district San Nicolas)
+ Santa Cruz          1380600000     1  City of Manila (via Manila district Santa Cruz)
+   Sampaloc          1380600000     1    City of Manila (via Manila district Sampaloc)
+ San Miguel          1380600000     1  City of Manila (via Manila district San Miguel)
+     Ermita          1380600000     1      City of Manila (via Manila district Ermita)
+ Intramuros          1380600000     1  City of Manila (via Manila district Intramuros)
+     Malate          1380600000     1      City of Manila (via Manila district Malate)
+       Paco          1380600000     1        City of Manila (via Manila district Paco)
+   Pandacan          1380600000     1    City of Manila (via Manila district Pandacan)
+  Port Area          1380600000     1   City of Manila (via Manila district Port Area)
+  Santa Ana          1380600000     1   City of Manila (via Manila district Santa Ana)
+2026-09-23 16:45:53,289 | INFO    | Unmatched (real-LGU) tuples: 0
+2026-09-23 16:45:53,289 | INFO    | Merging back to panel...
+2026-09-23 16:45:53,294 | INFO    | Panel row match rate (real LGU): 100.0000%
+2026-09-23 16:45:53,321 | INFO    | Wrote psa_panel_with_psgc.parquet / .csv (1612 rows)
+2026-09-23 16:45:53,321 | INFO    | Done.

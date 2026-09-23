@@ -1,0 +1,36 @@
+==============================================================================
+SRE: 'Carmen' | province='Surigao del Norte' | region='Region XIII (Caraga)' | type='municipality'
+     lgu_keys=['carmen']  prov_keys=['surigao del norte', 'surigao norte', 'suriagao del norte', 'dinagat islands']  level=municipality
+     -- PSGC contents of candidate (province, level) pools --
+       [surigao del norte] level=municipality: 20 entries
+          key='alegria'                            name='Alegria' (1606701000)
+          key='bacuag'                             name='Bacuag' (1606702000)
+          key='burgos'                             name='Burgos' (1606704000)
+          key='claver'                             name='Claver' (1606706000)
+          key='dapa'                               name='Dapa' (1606707000)
+          key='del carmen'                         name='Del Carmen' (1606708000)
+          key='general luna'                       name='General Luna' (1606710000)
+          key='gigaquit'                           name='Gigaquit' (1606711000)
+          key='mainit'                             name='Mainit' (1606714000)
+          key='malimono'                           name='Malimono' (1606715000)
+          key='pilar'                              name='Pilar' (1606716000)
+          key='placer'                             name='Placer' (1606717000)
+       [surigao norte] level=municipality: 0 entries
+       [suriagao del norte] level=municipality: 0 entries
+       [dinagat islands] level=municipality: 7 entries
+          key='basilisa'                           name='Basilisa' (1608501000)
+          key='cagdianao'                          name='Cagdianao' (1608502000)
+          key='dinagat'                            name='Dinagat' (1608503000)
+          key='libjo'                              name='Libjo' (1608504000)
+          key='loreto'                             name='Loreto' (1608505000)
+          key='san jose'                           name='San Jose' (1608506000)
+          key='tubajon'                            name='Tubajon' (1608507000)
+     -- top fuzzy candidates --
+     [GLOBAL                   ] 1.000  Carmen (municipality, 0701212000)
+     [GLOBAL                   ] 1.000  Carmen (municipality, 0702215000)
+     [GLOBAL                   ] 1.000  Carmen (municipality, 1102303000)
+     [GLOBAL                   ] 1.000  Carmen (municipality, 1204702000)
+     [GLOBAL                   ] 1.000  Carmen (municipality, 1600204000)
+     [GLOBAL                   ] 1.000  Carmen (municipality, 1606806000)
+     [GLOBAL                   ] 0.769  City of Carmona (city, 0402104000)
+     [surigao del norte        ] 0.750  Del Carmen (municipality, 1606708000)

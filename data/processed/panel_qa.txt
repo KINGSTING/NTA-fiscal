@@ -1,0 +1,44 @@
+==============================================================================
+PANEL QA
+==============================================================================
+Rows: 55,904
+Cols: 91
+
+-- Years --
+  min=1992  max=2024  n_years=33
+  rows/year  min=1596  median=1702  max=1714
+
+-- LGUs --
+  unique psgc10: 1714
+    city            149
+    municipality    1483
+    province        82
+  unique regions: 18
+
+-- Source coverage --
+  in both: 52,070
+  only SRE: 3,834
+  only PSA: 0
+
+-- Poverty coverage --
+  poverty_pi non-null: 4,785 (8.56%)
+    2018: 1,595 LGUs with PI
+    2021: 1,595 LGUs with PI
+    2023: 1,595 LGUs with PI
+  pi_2018 broadcast non-null: 52,070
+
+-- Manila --
+  collapsed 14 district rows -> 1 (psgc10=1380600000)
+
+-- Top-of-file sample --
+    psgc10     lgu_name     province                   region lgu_type  fiscal_year    nta_ira  poverty_pi
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         1992  46.066295         NaN
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         1993  83.411499         NaN
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         1994 124.187082         NaN
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         1995 136.898909         NaN
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         1996 150.870459         NaN
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         1997 185.838598         NaN
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         1998 198.727156         NaN
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         1999 239.800559         NaN
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         2000 291.650992         NaN
+0102800000 Ilocos Norte Ilocos Norte Region I (Ilocos Region) province         2001 286.785126         NaN

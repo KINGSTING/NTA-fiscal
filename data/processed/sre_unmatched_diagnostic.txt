@@ -1,0 +1,43 @@
+==============================================================================
+SRE: '`' | province='Ilocos Norte' | region='Region I' | type='Municipality'
+     lgu_keys=[]  prov_keys=['ilocos norte']  level=municipality
+     -- PSGC contents of candidate (province, level) pools --
+       [ilocos norte] level=municipality: 21 entries
+          key='adams'                              name='Adams' (0102801000)
+          key='bacarra'                            name='Bacarra' (0102802000)
+          key='badoc'                              name='Badoc' (0102803000)
+          key='bangui'                             name='Bangui' (0102804000)
+          key='banna'                              name='Banna' (0102811000)
+          key='burgos'                             name='Burgos' (0102806000)
+          key='carasi'                             name='Carasi' (0102807000)
+          key='currimao'                           name='Currimao' (0102808000)
+          key='dingras'                            name='Dingras' (0102809000)
+          key='dumalneg'                           name='Dumalneg' (0102810000)
+          key='marcos'                             name='Marcos' (0102813000)
+          key='nueva era'                          name='Nueva Era' (0102814000)
+     -- top fuzzy candidates --
+==============================================================================
+SRE: 'PROVINCIAL TOTAL' | province='Sultan Kudarat' | region='Region XII' | type='Municipality'
+     lgu_keys=['provincial total']  prov_keys=['sultan kudarat']  level=municipality
+     -- PSGC contents of candidate (province, level) pools --
+       [sultan kudarat] level=municipality: 11 entries
+          key='bagumbayan'                         name='Bagumbayan' (1206501000)
+          key='columbio'                           name='Columbio' (1206502000)
+          key='esperanza'                          name='Esperanza' (1206503000)
+          key='isulan'                             name='Isulan' (1206504000)
+          key='kalamansig'                         name='Kalamansig' (1206505000)
+          key='lambayong'                          name='Lambayong' (1206508000)
+          key='lebak'                              name='Lebak' (1206506000)
+          key='lutayan'                            name='Lutayan' (1206507000)
+          key='palimbang'                          name='Palimbang' (1206509000)
+          key='president quirino'                  name='President Quirino' (1206510000)
+          key='sen ninoy aquino'                   name='Sen. Ninoy Aquino' (1206512000)
+     -- top fuzzy candidates --
+     [GLOBAL                   ] 0.522  Pototan (municipality, 0603037000)
+     [GLOBAL                   ] 0.500  Moalboal (municipality, 0702233000)
+     [GLOBAL                   ] 0.480  Binalonan (municipality, 0105512000)
+     [GLOBAL                   ] 0.480  Agoncillo (municipality, 0401001000)
+     [GLOBAL                   ] 0.467  Don Victoriano (municipality, 1004217000)
+     [GLOBAL                   ] 0.462  Pinabacdao (municipality, 0806013000)
+     [GLOBAL                   ] 0.455  Pinili (municipality, 0102819000)
+     [GLOBAL                   ] 0.455  Vintar (municipality, 0102823000)

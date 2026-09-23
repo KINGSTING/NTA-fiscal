@@ -1,0 +1,36 @@
+2026-09-23 14:48:25,959 | INFO    | PSGC harmonizer starting
+2026-09-23 14:48:25,959 | INFO    | Input:  data\PSA\PSGC-2Q-2026-Publication-Datafile.xlsx
+2026-09-23 14:48:25,959 | INFO    | Outdir: data\processed
+2026-09-23 14:48:26,883 | INFO    | Header row detected at index 0 in sheet 'PSGC'
+2026-09-23 14:48:29,669 | INFO    | Raw shape: (43768, 11)
+2026-09-23 14:48:29,669 | INFO    | Raw columns: ['10-digit PSGC', 'Name', 'Correspondence Code', 'Geographic Level', 'Old names', 'City Class', 'Income\nClassification (DOF DO No. 074.2024)', 'Urban / Rural\n(based on 2020 CPH)', '2024 Population', 'Unnamed: 9', 'Status']
+2026-09-23 14:48:29,945 | INFO    | --- Validation ---
+2026-09-23 14:48:29,948 | INFO    | Level counts: {'barangay': 42010, 'municipality': 1493, 'city': 149, 'province': 82, 'region': 18, 'submunicipality': 14}
+2026-09-23 14:48:29,948 | INFO    |   ✓ province      82
+2026-09-23 14:48:29,948 | INFO    |   ✓ city          149
+2026-09-23 14:48:29,948 | INFO    |   ✓ municipality  1493
+2026-09-23 14:48:29,951 | INFO    |   ✓ psgc10 is unique
+2026-09-23 14:48:29,955 | INFO    |   independent cities (HUC/ICC): 34
+2026-09-23 14:48:29,958 | INFO    |   total LGU rows (Prov+City+Mun): 1724
+2026-09-23 14:48:29,958 | INFO    |   total 2024 population (LGU rows): 201,103,676
+2026-09-23 14:48:30,008 | INFO    | Wrote data\processed\psgc_lgu_master.parquet (1724 rows)
+2026-09-23 14:48:30,011 | INFO    | Wrote data\processed\psgc_regions_master.parquet (18 rows)
+2026-09-23 14:48:30,014 | INFO    | Wrote data\processed\psgc_provinces_master.parquet (82 rows)
+2026-09-23 14:48:30,018 | INFO    | Wrote data\processed\psgc_cities_master.parquet (149 rows)
+2026-09-23 14:48:30,024 | INFO    | Wrote data\processed\psgc_municipalities_master.parquet (1493 rows)
+2026-09-23 14:48:30,026 | INFO    | Wrote data\processed\psgc_submunicipalities_master.parquet (14 rows)
+2026-09-23 14:48:30,091 | INFO    | Wrote data\processed\psgc_barangays_master.parquet (42010 rows)
+2026-09-23 14:48:30,100 | INFO    | Wrote data\processed\psgc_lgu_master.csv
+2026-09-23 14:48:30,104 | INFO    | Preview (first 10 LGU rows):
+    psgc10     psgc9    level              name                            region_name     province_name  is_independent_city  pop_2024
+1400100000 140100000 province              Abra Cordillera Administrative Region (CAR)              Abra                False    246948
+1401100000 141100000 province           Benguet Cordillera Administrative Region (CAR)           Benguet                False    473190
+1402700000 142700000 province            Ifugao Cordillera Administrative Region (CAR)            Ifugao                False    208668
+1403200000 143200000 province           Kalinga Cordillera Administrative Region (CAR)           Kalinga                False    235391
+1404400000 144400000 province Mountain Province Cordillera Administrative Region (CAR) Mountain Province                False    149775
+1408100000 148100000 province            Apayao Cordillera Administrative Region (CAR)            Apayao                False    126587
+0102800000 012800000 province      Ilocos Norte               Region I (Ilocos Region)      Ilocos Norte                False    618850
+0102900000 012900000 province        Ilocos Sur               Region I (Ilocos Region)        Ilocos Sur                False    709991
+0103300000 013300000 province          La Union               Region I (Ilocos Region)          La Union                False    825072
+0105500000 015500000 province        Pangasinan               Region I (Ilocos Region)        Pangasinan                False   3188540
+2026-09-23 14:48:30,104 | INFO    | Done.

@@ -1,0 +1,94 @@
+==============================================================================
+PANEL_ML QA
+==============================================================================
+Rows: 55,904   Cols: 128
+Years: 1992-2024
+LGUs:  1714
+
+-- UR coverage --
+  ur_a               non-null  27,064  ( 48.4%)  median=0.000
+  ur_b               non-null  55,270  ( 98.9%)  median=0.102
+  ur_a_current       non-null  27,064  ( 48.4%)  median=0.000
+  ur_b_current       non-null  55,270  ( 98.9%)  median=0.102
+  target_ur_a        non-null  27,061  ( 48.4%)  median=0.000
+  target_ur_b        non-null  53,650  ( 96.0%)  median=0.102
+
+-- UR_b by year --
+  1992: n=1,593  mean=0.136  median=0.107
+  1993: n=1,566  mean=0.126  median=0.091
+  1994: n=1,476  mean=0.139  median=0.116
+  1995: n=1,673  mean=0.100  median=0.066
+  1996: n=1,675  mean=0.093  median=0.059
+  1997: n=1,676  mean=0.091  median=0.064
+  1998: n=1,680  mean=0.062  median=0.032
+  1999: n=1,678  mean=0.105  median=0.085
+  2000: n=1,596  mean=0.118  median=0.096
+  2001: n=1,677  mean=0.046  median=0.005
+  2002: n=1,680  mean=0.118  median=0.098
+  2003: n=1,682  mean=0.108  median=0.079
+  2004: n=1,686  mean=0.091  median=0.060
+  2005: n=1,687  mean=0.106  median=0.079
+  2006: n=1,689  mean=0.110  median=0.082
+  2007: n=1,700  mean=0.101  median=0.070
+  2008: n=1,704  mean=0.112  median=0.085
+  2009: n=1,663  mean=0.122  median=0.097
+  2010: n=1,684  mean=0.119  median=0.087
+  2011: n=1,688  mean=0.133  median=0.109
+  2012: n=1,677  mean=0.100  median=0.072
+  2013: n=1,676  mean=0.105  median=0.080
+  2014: n=1,704  mean=0.160  median=0.145
+  2015: n=1,706  mean=0.193  median=0.179
+  2016: n=1,706  mean=0.200  median=0.183
+  2017: n=1,702  mean=0.212  median=0.199
+  2018: n=1,702  mean=0.229  median=0.192
+  2019: n=1,697  mean=0.194  median=0.155
+  2020: n=1,705  mean=0.203  median=0.174
+  2021: n=1,707  mean=0.190  median=0.163
+  2022: n=1,713  mean=0.221  median=0.202
+  2023: n=1,713  mean=0.140  median=0.111
+  2024: n=1,709  mean=0.143  median=0.113
+
+-- UR_b by template era --
+  BOS_1992_2000      n=14,613  mean=0.107  median=0.077
+  SIE_2001_2008      n=13,505  mean=0.099  median=0.069
+  SRE_2018_2021      n=22,017  mean=0.166  median=0.138
+  SRE_2022_2024      n=5,135  mean=0.168  median=0.141
+
+-- spent_source by era --
+  BOS_1992_2000      detailed=14,603  total=   396
+  SIE_2001_2008      detailed=     0  total=13,539
+  SRE_2018_2021      detailed=21,860  total=   365
+  SRE_2022_2024      detailed= 5,121  total=    20
+
+-- UR by decade (both definitions) --
+  1992-1999: n=13,403  ur_a mean=nan non-null=0.0%  | ur_b mean=0.106 non-null=97.1%
+  2000-2009: n=16,848  ur_a mean=0.021 non-null=9.7%  | ur_b mean=0.103 non-null=99.5%
+  2010-2019: n=17,093  ur_a mean=0.070 non-null=98.8%  | ur_b mean=0.165 non-null=99.1%
+  2020-2024: n= 8,560  ur_a mean=0.119 non-null=99.8%  | ur_b mean=0.179 non-null=99.8%
+
+-- Feature non-null rates --
+  capex_share_avail                      48.6%
+  external_share                         74.7%
+  fund_balance_share                     48.6%
+  local_share                            98.9%
+  log_fund_cash_balance_end              49.0%
+  log_land_area_sqkm                     96.2%
+  log_nta_ira                            100.0%
+  log_population                         100.0%
+  log_total_capital_investment_exp       49.0%
+  log_total_current_operating_income     100.0%
+  log_total_external_sources             75.8%
+  log_total_local_sources                100.0%
+  nta_dependency                         98.9%
+  pop_density                            96.2%
+  revenue_hhi                            100.0%
+  target_ur_a                            48.4%
+  target_ur_b                            96.0%
+  ur_a                                   48.4%
+  ur_a_current                           48.4%
+  ur_a_lag1                              45.4%
+  ur_a_lag2                              42.3%
+  ur_b                                   98.9%
+  ur_b_current                           98.9%
+  ur_b_lag1                              95.8%
+  ur_b_lag2                              92.7%

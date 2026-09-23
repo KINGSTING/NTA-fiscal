@@ -1,0 +1,104 @@
+==============================================================================
+K-MEANS SHAP CLUSTERING  (k=5)
+==============================================================================
+Each cluster groups LGUs whose average SHAP vectors are similar,
+i.e. LGUs driven by the same combination of predictive factors.
+
+-- Cluster sizes and dominant attributes --
+cluster   n_lgus  mean_ur  mean_nta_dep  mean_year  top_type   top_region
+------------------------------------------------------------------------------
+      0      939    0.104         0.839     2007.6  municipality Region VIII (Eastern Visayas)
+      1       14    0.187         0.542     2017.3  municipality Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+      2      214    0.188         0.661     2007.6  city       Region IV-A (CALABARZON)
+      3       86    0.041         0.968     2008.7  municipality Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+      4      461    0.186         0.810     2007.6  municipality Region I (Ilocos Region)
+
+-- Cluster signatures: mean SHAP of the features that most
+   distinguish each cluster from the global mean --
+
+  Cluster 0  (n=939):
+    shap_ur_b_current              delta=-0.01106  
+    shap_ur_b_lag1                 delta=-0.00337  
+    shap_ur_b_lag2                 delta=-0.00225  
+    shap_pi_2018                   delta=+0.00092  
+    shap_log_nta_ira               delta=-0.00052  
+    shap_lgu_type                  delta=-0.00040  
+    shap_fiscal_year               delta=-0.00035  
+    shap_nta_dependency            delta=-0.00018  
+
+  Cluster 1  (n=14):
+    shap_fiscal_year               delta=+0.02585  
+    shap_ur_b_lag2                 delta=+0.01095  
+    shap_ur_b_lag1                 delta=+0.01078  
+    shap_nta_dependency            delta=+0.01017  
+    shap_log_nta_ira               delta=+0.00961  
+    shap_pi_2018                   delta=-0.00929  
+    shap_ur_b_current              delta=+0.00550  
+    shap_region                    delta=-0.00241  
+
+  Cluster 2  (n=214):
+    shap_ur_b_current              delta=+0.02155  
+    shap_ur_b_lag1                 delta=+0.00594  
+    shap_ur_b_lag2                 delta=+0.00437  
+    shap_log_nta_ira               delta=+0.00330  
+    shap_lgu_type                  delta=+0.00299  
+    shap_log_population            delta=+0.00163  
+    shap_log_total_local_sources   delta=+0.00158  
+    shap_pi_2018                   delta=+0.00115  
+
+  Cluster 3  (n=86):
+    shap_ur_b_current              delta=-0.03476  
+    shap_pi_2018                   delta=-0.01564  
+    shap_ur_b_lag1                 delta=-0.00884  
+    shap_ur_b_lag2                 delta=-0.00830  
+    shap_log_total_local_sources   delta=-0.00535  
+    shap_region                    delta=-0.00386  
+    shap_nta_dependency            delta=-0.00170  
+    shap_log_nta_ira               delta=-0.00076  
+
+  Cluster 4  (n=461):
+    shap_ur_b_current              delta=+0.01884  
+    shap_ur_b_lag1                 delta=+0.00543  
+    shap_ur_b_lag2                 delta=+0.00378  
+    shap_region                    delta=+0.00092  
+    shap_pi_2018                   delta=+0.00080  
+    shap_log_nta_ira               delta=-0.00061  
+    shap_lgu_type                  delta=-0.00047  
+    shap_log_population            delta=-0.00041  
+
+-- Representative LGUs per cluster (highest mean UR) --
+
+  Cluster 0:
+    1102410000  Matanao                                   UR=0.188  municipality  Region XI (Davao Region)
+    0403430000  Victoria                                  UR=0.181  municipality  Region IV-A (CALABARZON)
+    1003505000  Kapatagan                                 UR=0.170  municipality  Region X (Northern Mindanao)
+    0205706000  Nagtipunan                                UR=0.170  municipality  Region II (Cagayan Valley)
+    1102401000  Bansalan                                  UR=0.167  municipality  Region XI (Davao Region)
+
+  Cluster 1:
+    1108600000  Davao Occidental                          UR=0.439  province      Region XI (Davao Region)
+    1900708000  Akbar                                     UR=0.412  municipality  Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+    1908818000  Pandag                                    UR=0.401  municipality  Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+    1908805000  Datu Hoffer Ampatuan                      UR=0.352  municipality  Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+    1900709000  Al-Barka                                  UR=0.207  municipality  Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+
+  Cluster 2:
+    0931700000  City of Zamboanga                         UR=0.424  city          Region IX (Zamboanga Peninsula)
+    1804515000  City of Kabankalan                        UR=0.361  city          Negros Island Region (NIR)
+    0403406000  Calauan                                   UR=0.344  municipality  Region IV-A (CALABARZON)
+    0102805000  City of Batac                             UR=0.335  city          Region I (Ilocos Region)
+    0702251000  City of Toledo                            UR=0.322  city          Region VII (Central Visayas)
+
+  Cluster 3:
+    1908811000  Gen. S.K. Pendatun                        UR=0.127  municipality  Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+    0802611000  Jipapad                                   UR=0.114  municipality  Region VIII (Eastern Visayas)
+    1900707000  Tuburan                                   UR=0.111  municipality  Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+    1908820000  Shariff Aguak                             UR=0.103  municipality  Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+    1903602000  Balabagan                                 UR=0.092  municipality  Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)
+
+  Cluster 4:
+    0102931000  Sugpon                                    UR=0.349  municipality  Region I (Ilocos Region)
+    0102803000  Badoc                                     UR=0.326  municipality  Region I (Ilocos Region)
+    0701247000  Valencia                                  UR=0.324  municipality  Region VII (Central Visayas)
+    1408101000  Calanasan                                 UR=0.302  municipality  Cordillera Administrative Region (CAR)
+    0102926000  Santa Maria                               UR=0.299  municipality  Region I (Ilocos Region)
